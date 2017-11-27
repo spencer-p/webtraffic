@@ -60,6 +60,7 @@ func main() {
 	http.HandleFunc(VIEWPATH, viewHandler)
 	http.HandleFunc(INDEXPATH, indexHandler)
 	http.HandleFunc(ADDPATH, addHandler)
+	http.Handle("/static/", http.StripPrefix("/static/", http.FileServer(http.Dir("static"))))
 
 	// Serve forever
 	http.ListenAndServe(":8080", nil)
