@@ -13,7 +13,7 @@ const (
 )
 
 func RunSimulation(input, id string) error {
-	log.Println("Running sim w/ id ", id)
+	log.Println("Running sim w/ id", id)
 	baseFile := path.Join(DATADIR, id)
 	err := os.Mkdir(baseFile, 0755)
 	if err != nil {
