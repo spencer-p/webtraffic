@@ -1,0 +1,9 @@
+<h1>Traffic Simulation</h1>
+<p>Welcome, yadda yadda yadda</p>
+<p><a href="/add/">Add a new simulation</a></p>
+<h3>Simulations:</h3>
+<ul>
+	{{range .Ids}}
+	<li><a href="/view/{{.}}">{{.}}</a></li>
+	{{end}}
+</ul>
