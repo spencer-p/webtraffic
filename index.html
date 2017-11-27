@@ -1,7 +1,30 @@
 <h1>Traffic Simulation</h1>
-<p>Welcome, yadda yadda yadda</p>
+<p>Welcome to the traffic simulation web portal. You may want to bookmark this
+home page since there are no navigational links on the other pages. Sorry about
+that.</p>
+<p>If you don't know what this is, you probably shouldn't be here. Alternatively
+you can take a look at <a href="https://github.com/spencer-p/traffic">this
+repository</a> for some more info.</p>
+<p>A note to simulation runners - I didn't make it very easy to distinguish
+between inputs. Every iteration gets essentially a random number assigned to it
+(a hash of the input string). Since there is no title or helpful metadata, I
+suggest you add an unused "Note" or "Title" field to the input JSON like so:</p>
+<p><code style="white-space: pre-wrap">
+	{
+		"Note": "This simulation is testing whether or not cars == good.",
+		"BusRouteInfo": [
+			...
+		],
+		"CarRouteInfo": [
+			...
+		],
+		...
+	}
+</code></p>
+<p>Remember the comma after the extra line! Note that the "Note" string can be any
+text, as long as it does not collide with the other keys. Hope that helps.</p>
 <p><a href="/add/">Add a new simulation</a></p>
-<h3>Simulations:</h3>
+<h2>Simulations, oldest - newest:</h2>
 <ul>
 	{{range .Ids}}
 	<li><a href="/view/{{.}}">{{.}}</a></li>
